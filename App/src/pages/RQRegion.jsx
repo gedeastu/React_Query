@@ -40,8 +40,7 @@ const RQRegion = () => {
     }
   return (
     <>
-      <h2>Data from API:</h2>
-      {data?.data.map(region => {
+      {data?.map(region => {
         return (
         <>
         <div key={region.key}>
