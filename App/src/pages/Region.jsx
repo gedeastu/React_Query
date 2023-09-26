@@ -12,8 +12,14 @@ import { useLoaderData,Link } from 'react-router-dom'
 // }
 export const DataRegionLoader = async () => {
     const response = await axios.get('http://localhost:2004/bali');
+    if (!response.data){
+      throw new Error('Failed to fetch data')
+    }
     return response;
 }
+// if (error) {
+//   return <h2>{error.message}</h2>
+// }
 const Region = () => {
   const regionData = useLoaderData();
   console.log(regionData);

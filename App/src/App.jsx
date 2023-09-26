@@ -8,6 +8,7 @@ import {
   RouterProvider
 } from 'react-router-dom'
 import { QueryClientProvider,QueryClient } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 const queryClient = new QueryClient();
 const RootLayout = lazy(() => import("./layouts/RootLayout"));
 const Home = lazy(() => import("./pages/Home"));
@@ -18,7 +19,7 @@ const router = createBrowserRouter(
     <Route path='/' element={<RootLayout/>}>
       <Route path='/' element={<Home/>}></Route>
       <Route path='region' element={<Region/>} loader={DataRegionLoader}></Route>
-      <Route path='rq-region' element={<RQRegion apiURL={'http://localhost:2004/bali'}/>}></Route>
+      <Route path='rq-region' element={<RQRegion/>}></Route>
     </Route>
   )
 )
@@ -31,6 +32,7 @@ const App = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <RouterProvider router={router}/>
     </Suspense>
+    <ReactQueryDevtools initialIsOpen={false} position='bottom-right'/>
     </QueryClientProvider>
     </>
   )
