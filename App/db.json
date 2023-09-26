@@ -2,24 +2,24 @@
   "bali":[
     {
       "id":1,
-      "City":"Gianyar",
-      "Population":532.972,
-      "Regent": "I Made Mahayastra",
-      "Desc":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta quidem tempore fugiat cumque in laborum adipisci sapiente accusantium quasi rem dolorem ducimus voluptates eveniet explicabo maxime, aspernatur tenetur minima maiores? Magni dolores eius nam laudantium numquam omnis sapiente sunt, eaque temporibus. Magnam numquam minima tenetur illo nihil, excepturi, qui consequatur ad, asperiores repudiandae reprehenderit quia maxime harum sapiente quidem iure quis. Veritatis consequuntur, sit soluta laborum doloremque distinctio, rem ea error et voluptate numquam ad porro facere aperiam amet at!"
+      "city":"Gianyar",
+      "population":532.900,
+      "regent": "I Made Mahayastra",
+      "desc":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta quidem tempore fugiat cumque in laborum adipisci sapiente accusantium quasi rem dolorem ducimus voluptates eveniet explicabo maxime, aspernatur tenetur minima maiores? Magni dolores eius nam laudantium numquam omnis sapiente sunt, eaque temporibus. Magnam numquam minima tenetur illo nihil, excepturi, qui consequatur ad, asperiores repudiandae reprehenderit quia maxime harum sapiente quidem iure quis. Veritatis consequuntur, sit soluta laborum doloremque distinctio, rem ea error et voluptate numquam ad porro facere aperiam amet at!"
     },
     {
       "id":2,
-      "City":"Tabanan",
-      "Population":"461,630",
-      "Regent":"Dr. I Komang Gede Sanjaya, SE, MM",
-      "Desc":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta quidem tempore fugiat cumque in laborum adipisci sapiente accusantium quasi rem dolorem ducimus voluptates eveniet explicabo maxime, aspernatur tenetur minima maiores? Magni dolores eius nam laudantium numquam omnis sapiente sunt, eaque temporibus. Magnam numquam minima tenetur illo nihil, excepturi, qui consequatur ad, asperiores repudiandae reprehenderit quia maxime harum sapiente quidem iure quis. Veritatis consequuntur, sit soluta laborum doloremque distinctio, rem ea error et voluptate numquam ad porro facere aperiam amet at!"
+      "city":"Tabanan",
+      "population":"461,630",
+      "regent":"Dr. I Komang Gede Sanjaya, SE, MM",
+      "desc":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta quidem tempore fugiat cumque in laborum adipisci sapiente accusantium quasi rem dolorem ducimus voluptates eveniet explicabo maxime, aspernatur tenetur minima maiores? Magni dolores eius nam laudantium numquam omnis sapiente sunt, eaque temporibus. Magnam numquam minima tenetur illo nihil, excepturi, qui consequatur ad, asperiores repudiandae reprehenderit quia maxime harum sapiente quidem iure quis. Veritatis consequuntur, sit soluta laborum doloremque distinctio, rem ea error et voluptate numquam ad porro facere aperiam amet at!"
     },
     {
       "id":3,
-      "City":"Denpasar",
-      "Population":"897.300",
-      "Regent":"Kadek Agus Arya Wibawa",
-      "Desc":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta quidem tempore fugiat cumque in laborum adipisci sapiente accusantium quasi rem dolorem ducimus voluptates eveniet explicabo maxime, aspernatur tenetur minima maiores? Magni dolores eius nam laudantium numquam omnis sapiente sunt, eaque temporibus. Magnam numquam minima tenetur illo nihil, excepturi, qui consequatur ad, asperiores repudiandae reprehenderit quia maxime harum sapiente quidem iure quis. Veritatis consequuntur, sit soluta laborum doloremque distinctio, rem ea error et voluptate numquam ad porro facere aperiam amet at!"
+      "city":"Denpasar",
+      "population":"897.300",
+      "regent":"Kadek Agus Arya Wibawa",
+      "desc":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta quidem tempore fugiat cumque in laborum adipisci sapiente accusantium quasi rem dolorem ducimus voluptates eveniet explicabo maxime, aspernatur tenetur minima maiores? Magni dolores eius nam laudantium numquam omnis sapiente sunt, eaque temporibus. Magnam numquam minima tenetur illo nihil, excepturi, qui consequatur ad, asperiores repudiandae reprehenderit quia maxime harum sapiente quidem iure quis. Veritatis consequuntur, sit soluta laborum doloremque distinctio, rem ea error et voluptate numquam ad porro facere aperiam amet at!"
     }
   ]
 }

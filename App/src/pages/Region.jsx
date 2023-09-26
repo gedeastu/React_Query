@@ -28,7 +28,7 @@ const Region = () => {
     <div>
       {regionData.data.map((data)=>(
         <div key={data.id}>
-          <h1>{data.City}</h1>
+          <h1>{data.city}</h1>
         </div>
       ))}
     </div>
