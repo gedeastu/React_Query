@@ -1,42 +1,54 @@
 import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
-const RQRegion = ({apiURL}) => {
-    // const data = useQuery(['data'],async () => {
-    //     return await axios.get('http://localhost:2004/bali')
-    // })
-    // if(isLoading) {
-    //     return(
-    //         <>
-    //         <h1>Loading...</h1>
-    //         </>
-    //     )
-    // }
-    const queryKey = ['data'];
-    const fetchData = async () => {
+// export const DataRQRegion = async () => {
+//     try {
+//         const response = await axios.get('http://localhost:2004/bali');
+//         return response.data;
+//     }catch(error){
+//         throw error
+//     }
+// }
+const RQRegion = () => {
+    // const RQRegionData = useLoaderData();
+    const DataRQRegion = async () => {
         try {
-            const response = await axios.get(apiURL);
+            const response = await axios.get('http://localhost:2004/bali');
             return response.data;
         }catch(error){
             throw error
         }
-      }
-      const data = useQuery({
+    }
+    const queryKey = ["rq-region"];
+    const {isError, data, error, isFetching} = useQuery({
         queryKey: queryKey,
-        queryFn: fetchData
+        queryFn: DataRQRegion,
+        // cacheTime: 50000,
+        staleTime: 0,
+        refetchOnMount: true,
+        refetchOnWindowFocus: 'always'
     });
+    if(isError){
+        return(
+         <h2>This is Error : {error.message}</h2>
+        )
+    }
+    if(!data){
+        return(
+        <><h2>Loading..</h2></>
+        )
+    }
   return (
     <>
       <h2>Data from API:</h2>
-      {
-        data.data.map(region => {
-            return (
-            <>
-            <div key={region.key}>
-            <h1>{region.City}</h1>
-            </div>
-            </>
-            )
+      {data?.data.map(region => {
+        return (
+        <>
+        <div key={region.key}>
+        <h1>{region.City}</h1>
+        </div>
+        </>
+        )
         })
       }
       {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
