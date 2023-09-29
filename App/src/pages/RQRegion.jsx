@@ -1,14 +1,7 @@
 import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
-// export const DataRQRegion = async () => {
-//     try {
-//         const response = await axios.get('http://localhost:2004/bali');
-//         return response.data;
-//     }catch(error){
-//         throw error
-//     }
-// }
+
 const RQRegion = () => {
     // const RQRegionData = useLoaderData();
 
@@ -26,7 +19,14 @@ const RQRegion = () => {
     const queryKey = ["rq-region"];
 
     //useQuery
-    const { isLoading, isError, data, error, isFetching, refetch,} = useQuery({
+    const { 
+      isLoading, 
+      isError, 
+      data, 
+      error, 
+      isFetching, 
+      refetch,
+    } = useQuery({
         // Get queryKey
         queryKey: queryKey,
 
@@ -36,15 +36,16 @@ const RQRegion = () => {
         // enabled use for disable or enable fetching data
         // enabled:false || true,
 
-        onSuccess: onSuccess,
-        onError: onError,
-        
-        // cacheTime: 50000,
+        cacheTime: 5000,
         staleTime: 0,
         refetchOnMount: true,
         refetchOnWindowFocus: 'always',
-        refetchInterval: 2000,
+        // refetchInterval: 2000,
         refetchIntervalInBackground: true,
+        // select: (data) => {
+        //   const dataRegion = data.map(region => {region.City})
+        //   return dataRegion;
+        // }
     });
 
     if(isError){
@@ -62,16 +63,11 @@ const RQRegion = () => {
         )
     }
 
-    const onSuccess = () => {
-      console.log('Perform side Effect after data fetching')
-    }
-
-    const onError = () => {
-      console.log('Perform side Effect after encountering error')
-    }
-    console.log({isLoading,isFetching})
+    // console.log({isLoading,isFetching})
+ 
   return (
     <>
+      {/* Called data with Data Transformtaion in react Query */}
       {data.map((region) => {
         return (
         <div key={region.id}>
@@ -81,6 +77,14 @@ const RQRegion = () => {
         )
       })
       }
+
+      {/* Called Data with Data Transformation */}
+      {/* {data?.map((region) => {
+        return (
+          <div key={region}>{region}</div>
+        )
+      })} */}
+
       {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
     </>
   )
